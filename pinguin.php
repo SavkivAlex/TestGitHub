@@ -1,5 +1,5 @@
 <?php
 
- echo ("hello world from Kiev!");
+ echo ("hello world");
 
 ?>
