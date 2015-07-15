@@ -1,13 +1,10 @@
 <?php
 
-$text = 0;
 
+echo "<a href='index.php?id=test'>Button</a>";
 
-
-echo "<a href='index.php?id=1'>Button</a>";
-$text += $_GET['id'];
-
-echo "<br>РџСЂРёС€Р»Рѕ $text<br>";
+$text = $_GET['id'];
+echo "<br>Пришло $text<br>";
 
 
 ?>
