@@ -3,7 +3,7 @@
 $test = 0;
 
 
-echo "<a href='index.php?id=1'>Button</a>";
+echo "<a href='index.php?id=1'>   Button   </a>";
 
 
 $text += $_GET['id'];
