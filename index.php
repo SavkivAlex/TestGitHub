@@ -12,5 +12,5 @@ else
 echo "<a href='index.php'>Button</a>";
 $test += 1;
 
-echo "<br>Вы видели страницу $test раз!<br>";
+echo "<br>Р’С‹ РІРёРґРµР»Рё СЃС‚СЂР°РЅРёС†Сѓ $test СЂР°Р·!<br>";
 ?>
