@@ -1,17 +1,51 @@
 <?php
-
-if(isset($_COOKIE['test']))
+function result ($a, $b, $z)
 {
-    $test=$_COOKIE['test'];
-    setcookie('test', $test += 1);
-}
-else
-{
-    setcookie('test', 0);
-}
-echo "<a href='index.php'>Button</a>";
-$test += 1;
+    switch ($z)
 
-echo "<br>Вы видели страницу $test раз!<br>";
-echo "<br>В灨瀊੩昨楳獥琨⑟䍏佋䥅嬧瑥獴❝⤩੻ਠ†․瑥獴㴤彃住䭉䕛❴敳琧崻ਠ†⁳整捯潫<br>";
+    {
+        case '+':
+        {
+            $rez = $a + $b;
+            break;
+        }
+        case '-':
+        {
+            $rez = $a - $b;
+            break;
+        }
+        case '*':
+        {
+            $rez = $a * $b;
+            break;
+        }
+        case '/':
+        {
+            if($b == 0)
+                $rez = "Error!";
+            else
+                $rez = $a / $b;
+            break;
+        }
+    }
+    return $rez;
+}
+
+$rez = result($_POST['a'], $_POST['b'], $_POST['z']);
+
 ?>
+
+<form action="index.php" method="post">
+    <input type="text" name="a" value="<?php echo $_POST['a'];?>">
+
+    <select name="z">
+        <option value="+" <?php if($_POST['z'] == '+') echo 'selected'; ?>>+</option>
+        <option value="-" <?php if($_POST['z'] == '-') echo 'selected'; ?>>-</option>
+        <option value="*" <?php if($_POST['z'] == '*') echo 'selected'; ?>>*</option>
+        <option value="/" <?php if($_POST['z'] == '/') echo 'selected'; ?>>/</option>
+    </select>
+
+    <input type="text" name="b" value="<?php echo $_POST['b'];?>">
+    <input type="submit" value="=" >
+    <input type="text" name="rez" value="<?php echo $rez;?>" disabled >
+</form>
