@@ -9,8 +9,8 @@ else
 {
     setcookie('test', 0);
 }
-echo "<a href='index.php?id=$test'>Button</a>";
+echo "<a href='index.php'>Button</a>";
 $test += 1;
 
-echo "<br>Вы вошли $test раз!<br>";
+echo "<br>Вы видели страницу $test раз!<br>";
 ?>
