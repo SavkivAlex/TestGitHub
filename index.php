@@ -1,19 +1,16 @@
 <?php
 
-
-
-
-echo "<br><br>";
-echo "<br><a href='index.php?id=1'>index</a></br>";
-echo "<a href='index.php?id=2'>other</a>";
-
-
-
-switch($_GET['id'])
+if(isset($_COOKIE['test']))
 {
-    case 1 :  header( 'Location: http://localhost:/TestGitHub/Index.html' ); break;
-    case 2 :  header( 'Location: http://localhost:/TestGitHub/other.html' ); break;
-    default: break;
+    $test=$_COOKIE['test'];
+    setcookie('test', $test += 1);
 }
+else
+{
+    setcookie('test', 0);
+}
+echo "<a href='index.php?id=$test'>Button</a>";
+$test += 1;
 
+echo "<br>Вы вошли $test раз!<br>";
 ?>
